@@ -69,9 +69,9 @@ Faults (overcurrent, low flow, communication loss, etc.) are handled by stopping
 
 ## Architecture
 
-The system's high-level block diagram and PCB design files are referenced from the `images/` folder.
+The system's high-level block diagram and PCB design files are referenced from the `Images/` folder.
 
-![Industrial Controller Architecture Block Diagram](images/architecture block diagram.png)
+![Industrial Controller Architecture Block Diagram](Images/architecture%20block%20diagram.png)
 
 ---
 
@@ -81,19 +81,19 @@ Detailed design documentation is split across the **hardware** and **firmware** 
 
 ### Hardware Design (Images & Files)
 
-Visualization files for the electronic design are referenced from the `images/` folder. Note that links with spaces are enclosed in parentheses to ensure proper rendering in Markdown:
+Visualization files for the electronic design are referenced from the `Images/` folder:
 
-* [`Schematic Design (PNG)`](images/SCH_Schematic1_1-P1_2025-10-31.png) — Detailed image of the main schematic page.
-* [`PCB Design Schematic (PNG)`](images/PCB design Schematic.png) — General visualization of the PCB circuit schematic.
-* [`PCB 3D View 1 (PNG)`](images/PCB 3d (1).png) — First 3D view of the assembled PCB.
-* [`PCB 3D View 4 (PNG)`](images/PCB 3d (4).png) — A different perspective 3D view.
+* [`Schematic Design (PNG)`](Images/SCH_Schematic1_1-P1_2025-10-31.png) — Detailed image of the main schematic page.
+* [`PCB Design Schematic (PNG)`](Images/PCB%20design%20Schematic.png) — General visualization of the PCB circuit schematic.
+* [`PCB 3D View 1 (PNG)`](Images/PCB%203d%20(1).png) — First 3D view of the assembled PCB.
+* [`PCB 3D View 4 (PNG)`](Images/PCB%203d%20(4).png) — A different perspective 3D view.
 
 ### Firmware Design
 
 Documentation detailing system logic and communication remains in the `firmware/Docs/` folder:
 
-* [`System Block Diagram`](images/system block diagram.png) — High-level overview of system components and data flow.
-* [`Fault Block Diagram`](images/fault block diagram.png) — Visualizing the fault monitoring and handling process.
+* [`System Block Diagram`](Images/system%20block%20diagram.png) — High-level overview of system components and data flow.
+* [`Fault Block Diagram`](Images/fault%20block%20diagram.png) — Visualizing the fault monitoring and handling process.
 * [`state_machine_diagram.md`](firmware/Docs/state_machine_diagram.md) — Describes system states (IDLE, TAPING, CLEANING, FAULT).
 * [`control_loops.md`](firmware/Docs/control_loops.md) — Explains PID loops and feedback logic.
 * [`fault_handling_table.md`](firmware/Docs/fault_handling_table.md) — Lists all faults and recovery actions.
