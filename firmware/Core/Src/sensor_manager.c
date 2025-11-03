@@ -1,9 +1,13 @@
-/* ===================================
- *  sensor_manager.c
- *  Auto-generated source stub
- *  Project: Industrial_Controller
- * =================================== */
+/* sensor_manager.c */
+#include "sensor_manager.h"
+#include "adc.h"
+#include "spi.h"
+#include "i2c.h"
 
-#include "../Inc/sensor_manager.h"
-
-/* TODO: Implement sensor_manager logic */
+void TaskSensorUpdate(void *argument)
+{
+    for (;;) {
+        Read_IMU();
+        vTaskDelay(pdMS_TO_TICKS(5));
+    }
+}
