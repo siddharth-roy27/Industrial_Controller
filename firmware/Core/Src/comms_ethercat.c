@@ -1,9 +1,10 @@
-/* ===================================
- *  comms_ethercat.c
- *  Auto-generated source stub
- *  Project: Industrial_Controller
- * =================================== */
+/* comms_ethercat.c */
+#include "comms_ethercat.h"
 
-#include "../Inc/comms_ethercat.h"
-
-/* TODO: Implement comms_ethercat logic */
+void TaskCommsEtherCAT(void *argument)
+{
+    for (;;) {
+        EtherCAT_ProcessPDOs();
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+}
