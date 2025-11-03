@@ -1,9 +1,16 @@
-/* ===================================
- *  pid_controller.c
- *  Auto-generated source stub
- *  Project: Industrial_Controller
- * =================================== */
+/* pid_controller.c */
+#include "pid_controller.h"
 
-#include "../Inc/pid_controller.h"
+float PID_Update(PID_t *pid, float setpoint, float measurement)
+{
+    float error = setpoint - measurement;
+    pid->integral += error * pid->dt;
+    float derivative = (error - pid->prev_error) / pid->dt;
+    float out = pid->Kp*error + pid->Ki*pid->integral + pid->Kd*derivative;
 
-/* TODO: Implement pid_controller logic */
+    if (out > pid->max) out = pid->max;
+    if (out < pid->min) out = pid->min;
+
+    pid->prev_error = error;
+    return out;
+}
